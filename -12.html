@@ -4,49 +4,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>包含两张图片的网页</title>
+  <title>包含图片和交互按钮的网页</title>
   <style>
     body {
-      background-color: #ccc; /* 将网页大背景颜色设置为灰色 */
+      background-color: #f0f0f0; /* 浅灰色背景 */
+      font-family: 'Segoe UI', sans-serif;
     }
-    img {
-      max-width: 50%; /* 将图片的最大宽度设置为50%，使其变小 */
-      height: auto;
-      border: 2px solid #ccc; /* 添加边框，颜色为浅灰色，宽度为2px */
-      margin-bottom: 10px; /* 图片底部边距 */
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
+
     h1 {
-      text-align: center; /* 标题居中 */
-      color: #333; /* 标题颜色为深灰色 */
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
     }
+
+    .button-group {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      margin: 0 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
     .image-container {
       display: flex;
-      flex-direction: column; /* 让容器内元素垂直排列 */
-      justify-content: center;
-      align-items: center; /* 让容器内元素水平居中 */
-      text-align: center; /* 让容器内的内容居中对齐，包括标题和图片 */
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
-    h2 {
+
+    .image-card {
       text-align: center;
-      color: #007bff; /* 将小标题颜色改为蓝色 */
-      margin-bottom: 5px; /* 小标题与图片之间增加一些间距 */
+    }
+
+    h2 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    img {
+      max-width: 50%;
+      height: auto;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
   </style>
 </head>
 
 <body>
-  <h1>可视化结果</h1>
-  <div class="image-container">
-    <h2>腾讯网新闻标题词云图</h2>
-    <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3011690789db48d1b46de3eb0bbec692.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1749632773&x-signature=InhYl9%2Fs2L4DqMvRa177HeORszM%3D"
-      alt="可视化1.png">
+  <div class="container">
+    <h1>可视化结果</h1>
+
+    <div class="button-group">
+      <button class="btn" onclick="openImage('https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3011690789db48d1b46de3eb0bbec692.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1749632773&x-signature=InhYl9%2Fs2L4DqMvRa177HeORszM%3D')">
+        腾讯网新闻标题词云图
+      </button>
+      
+      <button class="btn" onclick="openImage('https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/e23ec6f0d2d248a88893d56d0dceabeb.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1749632773&x-signature=33eAHe31rKwzxsLWtM%2BuxjFqy0U%3D')">
+        B站某视频弹幕词云图
+      </button>
+    </div>
+
+    <div class="image-container">
+      <div class="image-card">
+        <h2>腾讯网新闻标题词云图</h2>
+        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3011690789db48d1b46de3eb0bbec692.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1749632773&x-signature=InhYl9%2Fs2L4DqMvRa177HeORszM%3D" alt="可视化1.png">
+      </div>
+
+      <div class="image-card">
+        <h2>B站某视频弹幕词云图</h2>
+        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/e23ec6f0d2d248a88893d56d0dceabeb.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1749632773&x-signature=33eAHe31rKwzxsLWtM%2BuxjFqy0U%3D" alt="可视化2.png">
+      </div>
+    </div>
   </div>
-  <div class="image-container">
-    <h2>B站某视频弹幕词云图</h2>
-    <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/e23ec6f0d2d248a88893d56d0dceabeb.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1749632773&x-signature=33eAHe31rKwzxsLWtM%2BuxjFqy0U%3D"
-      alt="可视化2.png">
-  </div>
+
+  <!-- 图片弹窗脚本 -->
+  <script>
+    function openImage(url) {
+      window.open(url, '_blank', 'width=800,height=600,toolbar=no,scrollbars=yes');
+    }
+  </script>
 </body>
 
 </html>
-    
