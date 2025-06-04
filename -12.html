@@ -17,13 +17,13 @@
       padding: 20px;
       background-color: white;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
+    h1, h3 { /* 新增h3标题样式 */
       text-align: center;
       color: #333;
-      margin-bottom: 30px;
+      margin: 30px 0;
     }
 
     .button-group {
@@ -68,7 +68,17 @@
       height: auto;
       border: 2px solid #e0e0e0;
       border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    /* 新增图片容器样式 */
+    .new-image-card {
+      border-top: 2px dashed #e0e0e0; /* 顶部虚线分隔线 */
+      padding-top: 40px;
+      margin-top: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   </style>
 </head>
@@ -98,6 +108,12 @@
         <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/e23ec6f0d2d248a88893d56d0dceabeb.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1749632773&x-signature=33eAHe31rKwzxsLWtM%2BuxjFqy0U%3D" alt="可视化2.png">
       </div>
     </div>
+
+    <!-- 新增图片区域 -->
+    <div class="new-image-card">
+      <h3>B站某视频弹幕词频统计图</h3> <!-- 居中标题 -->
+      <img src="https://img.picui.cn/free/2025/06/04/684019d761448.png" alt="B站弹幕词频统计"> <!-- 替换为实际图片路径 -->
+    </div>
   </div>
 
   <!-- 图片弹窗脚本 -->
@@ -109,3 +125,4 @@
 </body>
 
 </html>
+    
