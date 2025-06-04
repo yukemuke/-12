@@ -1,60 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>美化后的图片展示</title>
+  <title>包含两张图片的网页</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f8f9fa;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    
-    .image-card {
-      background-color: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      border: 1px solid #dee2e6;
-    }
-    
-    .image-card:hover {
-      transform: translateY(-5px);
-    }
-    
     img {
-      max-width: 100%;
+      max-width: 50%; /* 将图片的最大宽度设置为50%，使其变小 */
       height: auto;
-      border-radius: 4px;
+      border: 2px solid #ccc; /* 添加边框，颜色为浅灰色，宽度为2px */
+      margin-bottom: 10px; /* 图片底部边距 */
     }
-    
+    h1 {
+      text-align: center; /* 标题居中 */
+      color: #333; /* 标题颜色为深灰色 */
+    }
+    .image-container {
+      display: flex;
+      flex-direction: column; /* 让容器内元素垂直排列 */
+      justify-content: center;
+      align-items: center; /* 让容器内元素水平居中 */
+      text-align: center; /* 让容器内的内容居中对齐，包括标题和图片 */
+    }
     h2 {
       text-align: center;
-      color: #343a40;
+      color: #007bff; /* 将小标题颜色改为蓝色 */
+      margin-bottom: 5px; /* 小标题与图片之间增加一些间距 */
     }
   </style>
 </head>
+
 <body>
-  <h2>数据可视化展示</h2>
-  <div class="container">
-    <div class="image-card">
-      <img src="可视化1.png" alt="数据可视化图表1">
-    </div>
-    <div class="image-card">
-      <img src="可视化2.png" alt="数据可视化图表2">
-    </div>
+  <h1>可视化结果</h1>
+  <div class="image-container">
+    <h2>腾讯网新闻标题词云图</h2>
+    <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3011690789db48d1b46de3eb0bbec692.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1749632773&x-signature=InhYl9%2Fs2L4DqMvRa177HeORszM%3D"
+      alt="可视化1.png">
+  </div>
+  <div class="image-container">
+    <h2>B站某视频弹幕词云图</h2>
+    <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/e23ec6f0d2d248a88893d56d0dceabeb.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1749632773&x-signature=33eAHe31rKwzxsLWtM%2BuxjFqy0U%3D"
+      alt="可视化2.png">
   </div>
 </body>
+
 </html>
+    
